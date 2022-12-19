@@ -379,7 +379,9 @@ class Main():
     def suorita(self):
         self.ohjeet()
         while True:
-            komento = int(input("Komento: "))
+            try:
+                komento = int(input("Komento: "))
+            except:ValueError
             if komento == 0:
                 print("Näkemiin!!!")
                 break
