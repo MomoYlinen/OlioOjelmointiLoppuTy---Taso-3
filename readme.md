@@ -3,6 +3,7 @@ Tämä ohjelma on tehty kurssia oliot ja tietokannat varten. Alla on kattava dok
 
 ## Sisältö
 
+
 - [Olio-ohjelmoinnin lopputyö taso 3](#olio-ohjelmoinnin-lopputyö-taso-3)
   - [Sisältö](#sisältö)
   - [Luokkakaavio ja arkkitehtuuri](#luokkakaavio-ja-arkkitehtuuri)
@@ -29,12 +30,12 @@ Tämä ohjelma on tehty kurssia oliot ja tietokannat varten. Alla on kattava dok
         - [Poista tavaroita](#poista-tavaroita)
         - [Luo taulut](#luo-taulut)
     - [Ohjelman piirteet](#ohjelman-piirteet)
-        - [1. OOP -perintä](#1-oop--perintä)
-        - [2. OOP -polymorfismi](#2-oop--polymorfismi)
+        - [1. OOP -Perintä](#1-oop--perintä)
+        - [2. OOP -Polymorfismi](#2-oop--polymorfismi)
         - [3. OOP -kapsulointi](#3-oop--kapsulointi)
         - [4. OOP -Abstraktio](#4-oop--abstraktio)
         - [5. SQL -Monen-suhde-moneen](#5-sql--monen-suhde-moneen)
-        - [6. SQL -tulosjoukon esittäminen](#6-sql--tulosjoukon-esittäminen)
+        - [6. SQL -Tulosjoukon esittäminen](#6-sql--tulosjoukon-esittäminen)
         - [7. SQL -Sarakelaskennan hyödyntäminen](#7-sql--sarakelaskennan-hyödyntäminen)
         - [8. SQL - Ryhmittelyn hyödyntäminen](#8-sql---ryhmittelyn-hyödyntäminen)
 
@@ -179,8 +180,8 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
 
 ### Ohjelman piirteet
 
-##### 1. OOP -perintä
-    - Ohjelmassa on käytetty paljon perintää, esimerkiksi käyttäjänluonnissa, tietokannassa ja ohjelmaluokissa.
+##### 1. OOP -Perintä
+- Ohjelmassa on käytetty paljon perintää, esimerkiksi käyttäjänluonnissa, tietokannassa ja ohjelmaluokissa.
 ```
 #tämä koodin pätkä on kayttaja.py-tiedostosta, jossa UusiKayttaja-luokka perii luokan Kayttaja
 
@@ -193,8 +194,8 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
         self.rooli = rooli
 ```
 
-##### 2. OOP -polymorfismi
-    - Polymorfismi tulee parhaiten esiin tietokanta.py-tiedossa.
+##### 2. OOP -Polymorfismi
+- Polymorfismi tulee parhaiten esiin tietokanta.py-tiedossa.
 
     ```
     # class Tietokanta määrittää yhteyden ja kursorin sqliteen, jota kaikki muut tietokanta.py-tiedostossa olevat luokat käyttävät.
@@ -219,7 +220,7 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
                 return list(vastaus)
     ```
 ##### 3. OOP -kapsulointi
-    - Ohjelmassa ei alunperin ollut kapsulointia, mutta se on lisätty jälkikäteen.
+- Ohjelmassa ei alunperin ollut kapsulointia, mutta se on lisätty jälkikäteen.
 
     ```
     #Kapsulointi estää muokkaamisen luokan ja aliluokan ulkopuolelta.
@@ -233,10 +234,10 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
         self.kayttaja = Kayttaja()
     ```
 ##### 4. OOP -Abstraktio
-    - Ohjelma ei sisällä abstraktiota. Ohjelmaan olisi voinut lisätä abstraktion, mutta se jäi tällä kertaa. `Class Tietokanta` voisi olla abstrakti pienellä muokkaamisella. Sitä ei käytetä ohjelman suoritus vaiheessa ollenkaan, mutta sisältää tärkeitä funktioita, kuten taulujen luomisen.
+- Ohjelma ei sisällä abstraktiota. Ohjelmaan olisi voinut lisätä abstraktion, mutta se jäi tällä kertaa. `Class Tietokanta` voisi olla abstrakti pienellä muokkaamisella. Sitä ei käytetä ohjelman suoritus vaiheessa ollenkaan, mutta sisältää tärkeitä funktioita, kuten taulujen luomisen.
 
 ##### 5. SQL -Monen-suhde-moneen
-    - Monen-suhde-moneen toteutuu `kayttajantavarat` taulussa. Tauluun tulee id, käyttäjän id ja tavaran id. Kun taulusta halutaan hakea käyttäjän tavarat, yhdistetään taulut `tavarat`ja `kayttajantavarat`.
+- Monen-suhde-moneen toteutuu `kayttajantavarat` taulussa. Tauluun tulee id, käyttäjän id ja tavaran id. Kun taulusta halutaan hakea käyttäjän tavarat, yhdistetään taulut `tavarat`ja `kayttajantavarat`.
 
     ```
     # Tässä funktio käyttää saamaansa käyttäjän id:tä löytääkseen käyttäjän tavarat.
@@ -248,8 +249,8 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
             return loydetyt_tavarat
     ```
 
-##### 6. SQL -tulosjoukon esittäminen
-    - Ohjelmassa tulosjoukkoja rajataan enimmäkseen `WHERE`-lausekkeella. Lisäksi ohjelma käyttää toimintoa `MAX` toimintoa, jonka avulla se hakee korkeimman id:n tietokannasta. Tämän avulla tietokantaan ei päädy tiedostoja, joilla on sama id.
+##### 6. SQL -Tulosjoukon esittäminen
+- Ohjelmassa tulosjoukkoja rajataan enimmäkseen `WHERE`-lausekkeella. Lisäksi ohjelma käyttää toimintoa `MAX` toimintoa, jonka avulla se hakee korkeimman id:n tietokannasta. Tämän avulla tietokantaan ei päädy tiedostoja, joilla on sama id.
 
     ```
     # SELECT MAX(id) etsii suurimman id:n tietokannasta, jonka jälkeen siihen lisätään + 1. Jos tauluun ei ole tallennettu mitään, annetaan id:ksi 1.
@@ -279,7 +280,7 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
                 return list(vastaus)
     ```
 ##### 7. SQL -Sarakelaskennan hyödyntäminen
-    - Ohjelma käyttää sarakelaskentaa, silloin kun tarvitaan käyttäjän tavaroiden yhteenlaskettu arvo ja kappalemäärä.
+- Ohjelma käyttää sarakelaskentaa, silloin kun tarvitaan käyttäjän tavaroiden yhteenlaskettu arvo ja kappalemäärä.
   
     ```
     #Tämä funktio laskee tavaroiden arvon yhteensä ja tavaroiden määrän.
@@ -297,4 +298,4 @@ Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento
     ```
 
 ##### 8. SQL - Ryhmittelyn hyödyntäminen
-    - Ohjelma ei käytä ryhmittelyä hyväksi. Ryhmittelyä olisi voinut käyttää esimerkiksi tavaroiden järjestämiseen arvon mukaan, mutta se ei ole tällä kertaa mukana.        
+- Ohjelma ei käytä ryhmittelyä hyväksi. Ryhmittelyä olisi voinut käyttää esimerkiksi tavaroiden järjestämiseen arvon mukaan, mutta se ei ole tällä kertaa mukana.        
