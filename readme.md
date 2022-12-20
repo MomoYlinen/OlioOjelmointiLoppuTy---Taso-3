@@ -2,6 +2,11 @@
 Tämä ohjelma on tehty kurssia oliot ja tietokannat varten. 
 'Tehtävänä oli tehdä pelinhallintasysteemi. Alla on kuvaus ohjelmantoiminnoista ja esimerkkiajot.
 
+## Luokkakaavio
+Kuvassa luokkakaavio, joka sisältää kaikki luokat ja apuohjelmat.
+
+![TaysiLuokkakaavio] (Kaaviot/TaysiluokkaKaavio.png)
+
 ## Esimerkkiajo
 
 ### Kirjautumisvaihtoehdot

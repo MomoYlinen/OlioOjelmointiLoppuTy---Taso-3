@@ -44,7 +44,7 @@ class KayttajaPaneeli():
         print("")
         
     
-    def näytä_tiimikaverit(self):
+    def nayta_tiimikaverit(self):
         tulokset = self.kayttaja.etsi_tiimi_kavereita(self.tiimi)
         print(f"Sinun tiimisi: {self.tiimi}")
         print("-----------------------------")
@@ -111,7 +111,7 @@ class KayttajaPaneeli():
                 print("")
                 self.mini_ohjeet()   
             elif komento == 2:
-                self.näytä_tiimikaverit()
+                self.nayta_tiimikaverit()
                 print("")
                 self.mini_ohjeet() 
             elif komento == 3:
@@ -340,7 +340,7 @@ class Main():
     def uusi_kayttaja(self):
         while True:
             kayttajanimi = input("Anna käyttäjänimi: ")
-            uniikki_nimi = self.uniikki_käyttäjä_nimi(kayttajanimi)
+            uniikki_nimi = self.uniikki_kayttaja_nimi(kayttajanimi)
             if uniikki_nimi == True:
                 break
             else:
@@ -352,7 +352,7 @@ class Main():
         uusi_kayttaja.lisaa_kayttaja_tietokantaan()
         return [kayttajanimi,salasana]
     
-    def uniikki_käyttäjä_nimi(self, kayttajanimi):
+    def uniikki_kayttaja_nimi(self, kayttajanimi):
         uniikki = self.kayttaja.hae_kayttaja_nimella(kayttajanimi)
         return uniikki
     

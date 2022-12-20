@@ -1,0 +1,148 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>580</y><w>280</w><h>190</h></coordinates><panel_attributes>class Main()
+--
+def __init__():
+	self.kayttaja = Kayttaja()
+-.
+def ohjeet(self)
+def uusi_kayttaja(self)
+def uniikki_kayttaja_nimi(self, kayttajanimi)
+def valitse_rooli(self)
+def valitse_tiimi(self)
+def kirjaudu(self)
+def suorita()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>280</y><w>280</w><h>240</h></coordinates><panel_attributes>class KayttajaPaneeli
+--
+def __init__(self,id,nimi,tiimi,rooli)
+        self.id = id
+        self.nimi = nimi
+        self.tiimi = tiimi
+        self.rooli = rooli
+        self.kayttaja = Kayttaja()
+-.
+def ohjeet(self)
+def mini_ohjeet(self)
+def tervehdys(self)
+def nayta_tiimikaverit(self)
+def vaihda_tiimia(self)
+def valitse_tiimi(self)
+def nayta_tiedot(self)
+def suorita(self)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>20</y><w>280</w><h>220</h></coordinates><panel_attributes>class TavararoidenHallinta(KayttajaPaneeli)
+--
+def __init__(self, id, nimi, tiimi, rooli):
+        super().__init__(id, nimi, tiimi, rooli)
+        self.kayttajan_tavarat = KayttajanTavarat()
+-.
+def ohjeet(self)
+def mini_ohjeet(self)
+def lisaa_tavara(self)
+def tavaroiden_arvo(self)
+def poista_tavara(self)
+def nayta_kayttaja_tavarat(self)
+def suorita(self)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>40</y><w>350</w><h>220</h></coordinates><panel_attributes>class KayttajanTavarat()
+--
+def __init__(self):
+        self.kayttajanTavaraTaulu = KayttajanTavaraTaulu()
+-.
+def hae_tavarat(self)
+def hae_tavara_nimella(self,tavaran_nimi)
+def lisaa_tavara_kayttajalle(self,kayttajan_id,tavaran_id)
+def hae_kayttajan_tavarat(self,kayttaja_id)
+def hae_kayttajien_tavaroiden_arvo(self,kayttaja_id)
+def poista_kayttajan_tavara(self,kayttaja_id,tavaran_id)
+def poista_poista_kayttajanTavaraTaulusta(self,tavaran_id)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>280</y><w>350</w><h>170</h></coordinates><panel_attributes>class Kayttaja()
+--
+def __init__(self):
+      self.kayttajataulu = KayttajaTaulu()
+-.
+def lisaa_kayttaja_tietokantaan(self)
+def hae_kayttaja_nimella(self,hae_nimi)
+def kirjaudu_sisaan(self, nim, sal)
+def etsi_tiimi_kavereita(self, etsi_tiimi)
+def etsi_kaikki_kayttajat(self)
+def vaihda_tiimi(self,kayttajan_id,tiimi)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>460</y><w>230</w><h>120</h></coordinates><panel_attributes>class UusiKayttaja(Kayttaja)
+--
+def __init__(self,nimi,salasana,tiimi,rooli):
+        super().__init__()
+        self.nimi = nimi
+        self.salasana = salasana
+        self.tiimi = tiimi
+        self.rooli = rooli
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>10</y><w>420</w><h>150</h></coordinates><panel_attributes>class Tietokanta()
+--
+def __init__(self):
+      self.conn = sqlite3.connect("kanta.db")
+      self.curs = self.conn.cursor()
+-.
+def luo_tietokanta_kayttajat(self)
+def luo_tietokanta_tavarat(self)
+def luo_tietokanta_kayttajanTavarat(self)
+def poista_poyta(self)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>170</y><w>420</w><h>190</h></coordinates><panel_attributes>class KayttajanTavaraTaulu(Tietokanta)
+--
+def __init__(self):
+      super().__init__()
+-.
+def lisaa_tietokantaan_kayttajanTavara(self,kayttajan_id,tavaran_id)
+def poista_kayttajan_tavara_tietokannasta(self,kayttajan_id, tavaran_id)
+def hae_tavaran_id(self,tavaran_nimi)
+def hae_tavara_nimella(self,tavaran_nimi)
+def hae_tavarat_taulusta(self)
+def hae_kayttajan_tavarat_taulusta(self, kayttajan_id)
+def poista_tavara_taulusta(self,tavaran_id)
+def tavaroiden_arvo(self, kayttajan_id)
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>380</y><w>420</w><h>160</h></coordinates><panel_attributes>class KayttajaTaulu(Tietokanta)
+--
+def __init__(self):
+    super().__init__()
+-.
+def lisaa_tietokantaan(self,nimi,salasana,tiimi,rooli)
+def varmenna_kayttaja(self, nimi, salasana)
+def vaihda_kayttaja_tiimi(self,kayttajan_id,tiimi)
+def etsi_tietokannasta_nimella(self, etsi_nimi)
+def etsi_tiimi_kaveri(self, etsi_tiimi)
+def kaikki_kayttajat(self)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>950</x><y>560</y><w>420</w><h>150</h></coordinates><panel_attributes>class TavaraTaulu(Tietokanta)
+--
+def __init__(self):
+    super().__init__()
+-.
+def lisaa_tietokantaan_tavara(self,nimi,arvo)
+def etsi_tietokannasta_tavara(self, etsi_nimi)
+def hae_kaikki_tavarat(self)
+def poista_tavara(self, tavaran_id)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>600</y><w>270</w><h>200</h></coordinates><panel_attributes>class Paakayttaja()
+--
+def __init__(self):
+        self.kayttajat = Kayttaja()
+        self.tavarat = Tavarat()
+        self.kayttajan_tavarat = KayttajanTavarat()
+-.
+def ohjeet(self)
+def nayta_tietokannan_tavarat(self)
+def nayta_kaikki_kayttajat(self)
+def lisaa_tavaroita(self)
+def poista_tavaroita(self)
+def luo_taulut(self)
+def suorita(self)
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>140</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>110</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>690</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>550</y><w>70</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>490</y><w>70</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>290</x><y>380</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>530</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>240</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;10;30</additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>350</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>540</y><w>270</w><h>170</h></coordinates><panel_attributes>class Tavarat()
+--
+def __init__(self):
+      self.kayttajataulu = TavaraTaulu()
+-.
+def lisaa_tavara_tietokantaan(self, nimi, arvo)
+def hae_tavara(self,tavaran_nimi)
+def hae_tavaran_Id(self,tavaran_nimi)
+def hae_kaikki_tavarat(self)
+def poista_tavara_tavaraTaulusta(self, tavaran_id)
+def luo_taulut(self)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>720</y><w>100</w><h>70</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>80;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>700</y><w>150</w><h>110</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;90;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>570</x><y>460</y><w>60</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>40;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>580</x><y>260</y><w>120</w><h>360</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>100;10;10;340</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>90</y><w>280</w><h>140</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>260;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>160</y><w>270</w><h>150</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;250;130</additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>300</y><w>270</w><h>130</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>250;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>380</y><w>270</w><h>120</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;250;100</additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>610</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>650</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;-</panel_attributes><additional_attributes>10;10;50;10</additional_attributes></element></diagram>
