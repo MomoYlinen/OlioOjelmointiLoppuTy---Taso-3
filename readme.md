@@ -57,25 +57,38 @@ Käyttäjä voi poistaa omia tavaroitaan. Käyttäjä kirjoittaa tavaran nimen, 
 
 ![PoistaTavara](OhjelmanAjoKuvat/TavaranPoisto.png)
 
-### Pääkayttajä
+### Pääkäyttäjä
 Pääkäyttäjä voi luoda tavaroita, poistaa tavaroita, nähdä kaikki tietokannassa olevat tavarat ja pelaajat. Pääkäyttäjä voi myös luoda tietokantaan taulut käyttäjiä,tavaroita ja käyttäjäntavaroita varten.
 
 ##### Sisäänkirjautuminen
-pääkäyttäjälle pääsee kirjautumaan valitsemalla 9 kirjautumisvaihtoehdoissa. Tämä on piilotettu käyttäjältä. Pääkäyttäjän salasana on "paakayttaja"
+pääkäyttäjälle pääsee kirjautumaan valitsemalla 9 kirjautumisvaihtoehdoissa. Tämä on piilotettu käyttäjältä. Pääkäyttäjän salasana on "paakayttaja".
+
+![sisaankirjautuminen_paa](OhjelmanAjoKuvat/kirjautuminen_paa.png)
+
 
 #### Järjestelmänhallinta
+
+![JarjestelmanHallinta](OhjelmanAjoKuvat/JarjestelmanHallinta.png)
 
 ##### Näytä kaikki tavarat
 Näyttää tietokannassa olevat tavarat
 
+![NaytaKaikkiTavarat](OhjelmanAjoKuvat/TietokantaTavarat.png)
+
 ##### Näytä kaikki käyttäjät
 Näyttää tietokannassa olevat käyttäjät
+
+![NaytaKaikkiKayttajat](OhjelmanAjoKuvat/TietokantaKayttajat.png)
 
 ##### Lisää tavaroita
 Pyytää pääkäyttäjää syöttamään tavaran nimen ja arvon, jonka jälkeen tavara lisätään tietokantaan.
 
+![LisaaTavaraTietokantaan](OhjelmanAjoKuvat/TavaranLisaysTietokantaan.png)
+
 ##### Poista tavaroita
 Pyytää pääkäyttäjää syöttämään tavaran id:n, jonka jälkeen tavara poistetaan. Tavara poistetaan kokonaan tietokannasta, myös käyttäjien tavaroista.
+
+![TavaranPoistoTietokannasta](OhjelmanAjoKuvat/TavaranPoistoTietokannasta.png)
 
 ##### Luo taulut
 Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento ajetaan vain ensimmäisellä kerralla tai, jos taulut puuttuvat jostain syystä.
