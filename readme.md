@@ -2,10 +2,18 @@
 Tämä ohjelma on tehty kurssia oliot ja tietokannat varten. 
 'Tehtävänä oli tehdä pelinhallintasysteemi. Alla on kuvaus ohjelmantoiminnoista ja esimerkkiajot.
 
-## Luokkakaavio
+## Luokkakaavio ja arkkitehtuuri
+ Tarkoituksena on ollut rakentaa arkkitehtuuri, jossa `main.py` on vastuussa ohjelman pyörittämisestä. `kayttaja.py`,`tavarat.py` ja `kayttajan_tavarat.py` hoitavat tiedon hakemisen ja validoimisen. `tietokanta.py` vastaa tietokannasta: CREATE,READ,UPDATE,DELETE.
+
 Kuvassa luokkakaavio, joka sisältää kaikki luokat ja apuohjelmat.
 
 ![LuokkaKaavio](Kaaviot/TaysiluokkaKaavio.png)
+
+## Ohjelman toiminta
+
+Kuva ohjelmalogiikasta.
+
+![Ohjelmalogiikka](Kaaviot/Ohjelmalogiikka.png)
 
 ## Esimerkkiajo
 
