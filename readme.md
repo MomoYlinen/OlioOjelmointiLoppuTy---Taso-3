@@ -4,10 +4,10 @@ Tämä ohjelma on tehty kurssia oliot ja tietokannat varten.
 
 ## Sisältö
 
-1. [Go to Luokkakaavio ja arkkitehtuuri](#luokkakaavio-ja-arkkitehtuuri)
-2. [Go to Ohjelamntoiminta](#ohjelman-toiminta)
-3. [Go to Tietokanta](#tietokanta)
-4. [Go to Esimerkkiajot](#esimerkkiajo)
+1. [Luokkakaavio ja arkkitehtuuri](#luokkakaavio-ja-arkkitehtuuri)
+2. [Ohjelmantoiminta](#ohjelman-toiminta)
+3. [Tietokanta](#tietokanta)
+4. [Esimerkkiajot](#esimerkkiajo)
 
 ## Luokkakaavio ja arkkitehtuuri
  Tarkoituksena on ollut rakentaa arkkitehtuuri, jossa `main.py` on vastuussa ohjelman pyörittämisestä. `kayttaja.py`,`tavarat.py` ja `kayttajan_tavarat.py` hoitavat tiedon hakemisen ja validoimisen. `tietokanta.py` vastaa tietokannasta: CREATE,READ,UPDATE,DELETE.
@@ -18,7 +18,7 @@ Kuvassa luokkakaavio, joka sisältää kaikki luokat ja apuohjelmat.
 
 ## Ohjelman toiminta
 
-1. `class Main`on vastuussa käyttäjänluomisesta ja sisäänkirjautumisesta.
+1. `class Main`on vastuussa ohjelman käynnistämisestä, lopettamisesta, käyttäjänluomisesta ja sisäänkirjautumisesta.
 
 2. `class KayttajaPaneeli` on vastuussa käyttäjän tietojen näyttämisestä ja tiimin vaihtamisesta.
 
@@ -147,3 +147,19 @@ Pyytää pääkäyttäjää syöttämään tavaran id:n, jonka jälkeen tavara p
 
 ##### Luo taulut
 Pääkäyttäjä pystyy tarvittaessa luomaan taulut tietokantaan. Tämä komento ajetaan vain ensimmäisellä kerralla tai, jos taulut puuttuvat jostain syystä.
+
+### Ohjelman piirteet
+
+1. OOP -perintä
+    - Ohjelmassa on käytetty paljon perintää, esimerkiksi käyttäjänluonnissa, tietokannassa ja ohjelmaluokissa.
+```
+#tämä koodin pätkä on kayttaja.py-tiedostosta, jossa UusiKayttaja-luokka perii luokan Kayttaja
+
+    class UusiKayttaja(Kayttaja):
+    def __init__(self,nimi,salasana,tiimi,rooli):
+        super().__init__()
+        self.nimi = nimi
+        self.salasana = salasana
+        self.tiimi = tiimi
+        self.rooli = rooli
+```
