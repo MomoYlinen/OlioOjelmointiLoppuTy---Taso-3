@@ -11,9 +11,26 @@ Kuvassa luokkakaavio, joka sisältää kaikki luokat ja apuohjelmat.
 
 ## Ohjelman toiminta
 
+1. `class Main`on vastuussa käyttäjänluomisesta ja sisäänkirjautumisesta.
+
+2. `class KayttajaPaneeli` on vastuussa käyttäjän tietojen näyttämisestä ja tiimin vaihtamisesta.
+
+3. `class TavaroidenHallinta` on vastuussa tavaroiden näyttämisestä, lisäämisestä ja poistamisesta.
+
+4. `class Paakayttaja` on vastuussa tavaroiden lisäämisestä/poistamisesta tietokannasta. Pääkäyttäjäpaneelista voi myös tarkastella kaikkia tietokannasta löytyviä tavaroita ja käyttäjiä.
+
 Kuva ohjelmalogiikasta.
 
-![Ohjelmalogiikka](Kaaviot/Ohjelmalogiikka.png)
+![Ohjelmalogiikka](Kaaviot/Ohjelmalogiikka2.png)
+
+## Tietokanta
+Ohjelma käyttää sqlite3-tietokantaa. Tietokannassa on kolme taulua `kayttaja`, `tavarat` ja `kayttajantavarat`.
+
+1. `kayttaja`
+
+    |id | nimi | salasana | rooli | tiimi       |
+    |-- |------|----------|-------|-------------|
+    |1  |Momo  |1234      |Velho  |Mustat Kobrat|
 
 ## Esimerkkiajo
 
