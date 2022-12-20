@@ -1,0 +1,19 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>10</x><y>140</y><w>210</w><h>110</h></coordinates><panel_attributes>main.py
+--
+class Main
+class Kayttajapaneeli
+class Tavaroidenhallinta
+--
+class Paakayttaja</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>80</y><w>210</w><h>70</h></coordinates><panel_attributes>kayttaja.py
+--
+class Kayttaja</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>190</y><w>210</w><h>70</h></coordinates><panel_attributes>tavarat.py
+--
+class Tavarat</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>300</y><w>210</w><h>70</h></coordinates><panel_attributes>kayttajan_tavarat.py
+--
+class KayttajanTavarat</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>160</y><w>210</w><h>100</h></coordinates><panel_attributes>tietokanta.py
+--
+class Tietokanta
+class KayttajaTaulu
+class TavaraTaulu
+class KayttajanTavaraTaulu
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>220</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>120</y><w>80</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;70;60;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>220</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>240</y><w>90</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;100</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>250</y><w>140</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>110</y><w>140</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;50</additional_attributes></element></diagram>
