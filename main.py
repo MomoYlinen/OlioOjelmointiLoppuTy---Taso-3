@@ -17,10 +17,10 @@ from kayttajan_tavarat import KayttajanTavarat
                 
 class KayttajaPaneeli():
     def __init__(self,id,nimi,tiimi,rooli):
-        self.id = id
-        self.nimi = nimi
+        self._id = id
+        self._nimi = nimi
         self.tiimi = tiimi
-        self.rooli = rooli
+        self._rooli = rooli
         self.kayttaja = Kayttaja()
         
     def ohjeet(self):
@@ -40,7 +40,7 @@ class KayttajaPaneeli():
     
     def tervehdys(self):
         print("")
-        print(f"Tervetuloa {self.nimi}!!!")
+        print(f"Tervetuloa {self._nimi}!!!")
         print("")
         
     
@@ -93,9 +93,9 @@ class KayttajaPaneeli():
         print("Käyttäjätiedot")
         print("---------------")
         print("")
-        print(f"Käyttäjänimi: {self.nimi}")
+        print(f"Käyttäjänimi: {self._nimi}")
         print(f"Tiimi: {self.tiimi}")
-        print(f"Rooli: {self.rooli}")
+        print(f"Rooli: {self._rooli}")
         print("")
     
     def suorita(self):
@@ -115,7 +115,7 @@ class KayttajaPaneeli():
                 print("")
                 self.mini_ohjeet() 
             elif komento == 3:
-                tiedot_tavaran_hallintaan = TavaroidenHallinta(self.id,self.nimi,self.tiimi,self.rooli)
+                tiedot_tavaran_hallintaan = TavaroidenHallinta(self._id,self._nimi,self.tiimi,self._rooli)
                 tiedot_tavaran_hallintaan.suorita()
                 self.mini_ohjeet()
             elif komento == 4:
@@ -153,7 +153,7 @@ class TavaroidenHallinta(KayttajaPaneeli):
         komento = input("Kirjoita lisättävän tavaran nimi: ")
         loytyyko_tavaraa = self.kayttajan_tavarat.hae_tavara_nimella(komento)
         if loytyyko_tavaraa == True:
-            self.kayttajan_tavarat.lisää_tavara_kayttajalle(self.id, komento)
+            self.kayttajan_tavarat.lisää_tavara_kayttajalle(self._id, komento)
             print("Tavara on nyt lisätty!")
             print("")
         else:
@@ -164,24 +164,24 @@ class TavaroidenHallinta(KayttajaPaneeli):
             
 
     def tavaroiden_arvo(self):
-        tavaroiden_arvon_summa = self.kayttajan_tavarat.hae_kayttajan_tavaroiden_arvo(self.id)
+        tavaroiden_arvon_summa = self.kayttajan_tavarat.hae_kayttajan_tavaroiden_arvo(self._id)
         return tavaroiden_arvon_summa
             
             
     def poista_tavara(self):
-        hae_kayttajan_tavarat = self.kayttajan_tavarat.hae_kayttajan_tavarat(self.id)
+        hae_kayttajan_tavarat = self.kayttajan_tavarat.hae_kayttajan_tavarat(self._id)
         print("Minkä tavaran haluat poistaa?")
         print("-------------------------")
         for n in hae_kayttajan_tavarat:
             print(f"Esine: {n[0]}")
             print("")
         komento = input("Kirjoita poistettavan tavaran nimi: ")
-        self.kayttajan_tavarat.poista_kayttajan_tavara(self.id, komento)
+        self.kayttajan_tavarat.poista_kayttajan_tavara(self._id, komento)
             
                 
             
     def nayta_kayttaja_tavarat(self):
-        loydetyt = self.kayttajan_tavarat.hae_kayttajan_tavarat(self.id)
+        loydetyt = self.kayttajan_tavarat.hae_kayttajan_tavarat(self._id)
         tavaroiden_arvo_ja_maara = self.tavaroiden_arvo()
         print("")
         print("Omat tavarat")
