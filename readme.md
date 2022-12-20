@@ -28,9 +28,27 @@ Ohjelma käyttää sqlite3-tietokantaa. Tietokannassa on kolme taulua `kayttaja`
 
 1. `kayttaja`
 
-    |id | nimi | salasana | rooli | tiimi       |
-    |-- |------|----------|-------|-------------|
-    |1  |Momo  |1234      |Velho  |Mustat Kobrat|
+    |id | nimi    | salasana | rooli | tiimi         |
+    |-- |---------|----------|-------|---------------|
+    |1  |Momo     |1234      |Velho  |Mustat Kobrat  |
+    |2  |JohnDoe  |1234      |Ritaru |Muskettisoturit|
+
+2. `tavarat`
+   
+    |id | nimi | arvo |
+    |-- |------|------|
+    |1  |Miekka|300   |
+    |2  |Kilpi |500   |
+
+3. `kayttajatavarat`
+   
+    |id | kayttajan_id | tavaran_id |
+    |-- |--------------|------------|
+    |1  |1             |2           |
+    |2  |2             |1           |
+
+
+![TietokantaKuva](Kaaviot/Tietokantarakenne.png)
 
 ## Esimerkkiajo
 
