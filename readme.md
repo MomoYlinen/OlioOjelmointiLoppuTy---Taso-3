@@ -5,7 +5,7 @@ Tämä ohjelma on tehty kurssia oliot ja tietokannat varten.
 ## Luokkakaavio
 Kuvassa luokkakaavio, joka sisältää kaikki luokat ja apuohjelmat.
 
-![TaysiLuokkakaavio] (Kaaviot/TaysiluokkaKaavio.png)
+![LuokkaKaavio](Kaaviot/TaysiluokkaKaavio.png)
 
 ## Esimerkkiajo
 
