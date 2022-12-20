@@ -2,6 +2,18 @@ from kayttaja import Kayttaja,UusiKayttaja
 from tavarat import Tavarat
 from kayttajan_tavarat import KayttajanTavarat
 
+##################################################
+# Kurssi: AT00BT78-3005 Oliot ja tietokannat
+# Ohjelmanimi: LT-Taso-3
+# Tekijä: Momo Ylinen
+#
+# Vakuutan, että tämä ohjelma on minun tekemä.
+# Työhön olen käyttänyt seuraavia lähteitä, sekä
+# saanut apua seuraavilta henkilöiltä:
+# - Lähde Stackoverflow,Youtube
+# 
+##################################################
+
                 
 class KayttajaPaneeli():
     def __init__(self,id,nimi,tiimi,rooli):
