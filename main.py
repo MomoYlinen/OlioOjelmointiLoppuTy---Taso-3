@@ -220,6 +220,8 @@ class Paakayttaja():
         print("[1] - Näytä kaikki tavarat")
         print("[2] - Näytä kaikki käyttäjät")
         print("[3] - Lisää tavaroita")
+        print("[4] - Poista tavaroita")
+        print("[5] - Luo taulut")
         print("")
 
     def nayta_tietokannan_tavarat(self):
