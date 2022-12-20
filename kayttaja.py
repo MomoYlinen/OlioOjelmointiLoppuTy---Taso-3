@@ -28,6 +28,9 @@ class Kayttaja():
     def etsi_kaikki_kayttajat(self):
         kaikki_kayttajat = self.kayttajataulu.kaikki_kayttajat()
         return kaikki_kayttajat
+    
+    def vaihda_tiimi(self,kayttajan_id,tiimi):
+        self.kayttajataulu.vaihda_kayttaja_tiimi(kayttajan_id,tiimi)
             
 
 class UusiKayttaja(Kayttaja):

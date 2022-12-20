@@ -68,6 +68,11 @@ class KayttajaTaulu(Tietokanta):
             else:
                 return list(vastaus)
             
+    def vaihda_kayttaja_tiimi(self,kayttajan_id,tiimi):
+        with self.conn:
+            self.curs.execute("UPDATE kayttajat SET tiimi=:tiimi WHERE id=:kayttajan_id",{'tiimi':tiimi, 'kayttajan_id':kayttajan_id})
+            self.conn.commit()
+            
             
     def etsi_tietokannasta_nimella(self, etsi_nimi):
         with self.conn:

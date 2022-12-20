@@ -18,7 +18,7 @@ class KayttajaPaneeli():
         print("[1] - Näytä tiedot")
         print("[2] - Näytä tiimikaverit")
         print("[3] - Tavaroiden hallinta")
-        print("[4] - Näytä Käyttäjän tavarat")
+        print("[4] - Vaihda tiimiä")
         print("")
         print("[0] - Kirjaudu ulos")
         
@@ -38,6 +38,44 @@ class KayttajaPaneeli():
         print("-----------------------------")
         for n in tulokset:
             print(f"Käyttäjänimi: {n[0]} Rooli: {n[1]}")
+            
+    def vaihda_tiimia(self):
+        self.tiimi = self.valitse_tiimi()
+        self.kayttaja.vaihda_tiimi(self.id,self.tiimi)
+        print(f"Olet nyt tiimissä {self.tiimi}")
+    
+    def valitse_tiimi(self):
+        print("Mihin tiimiin haluat?")
+        print("----------------------")
+        print("")
+        print("[1] - Muskettisoturit")
+        print("[2] - Lohikäärmeet")
+        print("[3] - Mustat Koobrat")
+        print("[4] - Pimeyden Valtiaat")
+        print("")
+        valinta = "Ei valittu"
+        while True:
+            try:
+                komento = int(input ("Valitse Tiimisi: "))
+            except:ValueError
+            if komento == 1:
+                valinta = "Muskettisoturit"
+                break
+            elif komento == 2:
+                valinta = "Lohikäärmeet"
+                break
+            elif komento == 3:
+                valinta = "Mustat Koobrat"
+                break
+            elif komento == 4:
+                valinta = "Pimeyden Valtiaat"
+                break
+            print("")
+            print("Valitse tiimi!")
+            print("")
+        return valinta
+    
+    
     
     def nayta_tiedot(self):
         print("Käyttäjätiedot")
@@ -69,7 +107,7 @@ class KayttajaPaneeli():
                 tiedot_tavaran_hallintaan.suorita()
                 self.mini_ohjeet()
             elif komento == 4:
-                pass
+                self.vaihda_tiimia()
             else:
                 self.ohjeet()
                 
