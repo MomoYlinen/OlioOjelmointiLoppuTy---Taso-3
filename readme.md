@@ -2,4 +2,4 @@
 Tämä ohjelma on tehty kurssia oliot ja tietokannat varten. 
 'Tehtävänä oli tehdä pelinhallintasysteemi. Alla on kuvaus ohjelmantoiminnoista ja esimerkkiajot.
 
-
+<img src="ohjenajo/Käyttäjänluonti.png alt="Text">
