@@ -143,7 +143,6 @@ class KayttajanTavaraTaulu(Tietokanta):
         
         
     def lisaa_tietokantaan_kayttajanTavara(self,kayttajan_id,tavaran_id):
-        print("ID: ",kayttajan_id,tavaran_id)
         with self.conn:
             self.curs.execute("SELECT MAX(id) as maxid FROM kayttajantavarat")
             hae_id = (self.curs.fetchone())
@@ -175,7 +174,6 @@ class KayttajanTavaraTaulu(Tietokanta):
         with self.conn:
             self.curs.execute("SELECT * FROM tavarat WHERE nimi=:nimi",{'nimi':tavaran_nimi})
             haku = self.curs.fetchall()
-            print("Haku:", haku)
             if len(haku) == 0:
                 return False
             else:

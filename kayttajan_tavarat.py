@@ -20,7 +20,6 @@ class KayttajanTavarat():
         if hae_tavaran_id == False:
             return print("Tavaraa ei voida lisätä")
         self.kayttajanTavaraTaulu.lisaa_tietokantaan_kayttajanTavara(kayttajan_id,hae_tavaran_id)
-        print("ID", kayttajan_id, hae_tavaran_id)
         
     def hae_kayttajan_tavarat(self,kayttajan_id):
         loydetyt_tavarat = self.kayttajanTavaraTaulu.hae_kayttajan_tavarat_taulusta(kayttajan_id)

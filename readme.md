@@ -7,38 +7,53 @@ Tämä ohjelma on tehty kurssia oliot ja tietokannat varten.
 ### Kirjautumisvaihtoehdot
 Vaihtoehtoina on uuden käyttäjänluonti tai sisäänkirjautuminen.
 
-![kayttajanluonti](Ohjelmanajo/P%C3%A4%C3%A4valikko.png)
+![sisaankirjautumisvaihdoehdot](OhjelmanAjoKuvat/sisaankirjautumisvaihtoehdot.png)
 
 ##### Käyttäjänluonti
 Luodaan käyttäjä. Valitaan käyttäjänimi,salasana,rooli ja tiimi. Kaikilla käyttäjilla tulee olla uniikki käyttäjänimi. Ohjelma tarkistaa tämän tietokannasta.
 
-![kayttajanluonti](Ohjelmanajo/K%C3%A4ytt%C3%A4j%C3%A4nluonti.png)
+![Uusikayttaja](OhjelmanAjoKuvat/Uusikayttaja.png)
 
 ##### Sisäänkirjautuminen
 Sisäänkirjautuessa annetaan käyttäjänimi ja salasana. Nämä lähetetään tarkistettavaksi. Jos kirjautumistiedot löytyvät tietokannasta, palautetaan käyttäjän kaikki tiedot.
 
+![sisaankirjautuminen](OhjelmanAjoKuvat/Sisaankirjautuminen.png)
+
 ### Päävalikko
+
+![Paavalikko](OhjelmanAjoKuvat/Paavalikko.png)
 
 ##### Näytä Tiedot
 Sovellus näyttää käyttäjän tunnuksen,roolin ja tiimin.
 
-##### Näytä tiimikavarit
+##### Näytä tiimikaverit
 Sovellus näyttää samassa tiimissä olevat pelaajat.
+
+![NaytaTiimisi](OhjelmanAjoKuvat/NaytaTiimisi.png)
 
 ##### Vaihda tiimiä
 Käyttäjä voi vaihtaa tiimiä. Uusi tiimi tallennetaan tietokantaan ja KäyttäjäPaneeli-olioon.
 
+![VaihdaTiimia](OhjelmanAjoKuvat/VaihdaTiimia.png)
+
 #### Tavaroiden hallinta
+
+![TavaroidenHallinta](OhjelmanAjoKuvat/TavaroidenHallinta.png)
 
 ##### Näytä tavarat
 Käyttäjä voi tarkastella omia tavaroitaan. Sovellus näyttää myös tavaroiden arvon, yhteenlasketun arvon ja kappalemäärän. Nämä tiedot haetaan tietokannasta.
 
+![NaytaTavarat](OhjelmanAjoKuvat/OmatTavarat.png)
+
 ##### Lisää tavara
 Käyttäjä voi lisätä itselleen tavaroita, jotka löytyvät tietokannasta. Käyttäjä kirjoittaa tavaran nimen, jos nimi on oikein lisätään tavara käyttäjälle tietokantaan.
 
+![LisaaTavara](OhjelmanAjoKuvat/TavaranLisays.png)
+
 ##### Poista tavara
 Käyttäjä voi poistaa omia tavaroitaan. Käyttäjä kirjoittaa tavaran nimen, jos nimi on oikein poistetaan tavara käyttäjältä tietokannasta.
-#Tämä dokumentti on vielä puutteellinen. Päivitän korjautun version mahdollisimman pian.
+
+![PoistaTavara](OhjelmanAjoKuvat/TavaranPoisto.png)
 
 ### Pääkayttajä
 Pääkäyttäjä voi luoda tavaroita, poistaa tavaroita, nähdä kaikki tietokannassa olevat tavarat ja pelaajat. Pääkäyttäjä voi myös luoda tietokantaan taulut käyttäjiä,tavaroita ja käyttäjäntavaroita varten.
