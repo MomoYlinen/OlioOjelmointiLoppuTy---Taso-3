@@ -7,7 +7,7 @@ Tämä ohjelma on tehty kurssia oliot ja tietokannat varten.
 ### Kirjautumisvaihtoehdot
 Vaihtoehtoina on uuden käyttäjänluonti tai sisäänkirjautuminen.
 
-![sisaankirjautumisvaihdoehdot](OhjelmanAjoKuvat/sisaankirjautumisvaihtoehdot.png)
+![sisaankirjautumisvaihdoehdot](OhjelmanAjoKuvat/Sisaankirjautumisvaihtoehdot.png)
 
 ##### Käyttäjänluonti
 Luodaan käyttäjä. Valitaan käyttäjänimi,salasana,rooli ja tiimi. Kaikilla käyttäjilla tulee olla uniikki käyttäjänimi. Ohjelma tarkistaa tämän tietokannasta.
@@ -25,6 +25,8 @@ Sisäänkirjautuessa annetaan käyttäjänimi ja salasana. Nämä lähetetään 
 
 ##### Näytä Tiedot
 Sovellus näyttää käyttäjän tunnuksen,roolin ja tiimin.
+
+![NaytaKayttajaTiedot](OhjelmanAjoKuvat/KayttajaTiedot.png)
 
 ##### Näytä tiimikaverit
 Sovellus näyttää samassa tiimissä olevat pelaajat.
